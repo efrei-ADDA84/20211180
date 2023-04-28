@@ -28,5 +28,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
+          context : ./TP2
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp2:latest
