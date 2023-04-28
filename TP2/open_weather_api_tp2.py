@@ -11,8 +11,8 @@ def api():
     #Définition des variables de l'URL
     lat =  request.args.get('lat')
     lon = request.args.get('lon')
-    API_KEY= argv[1]
-    #API_KEY = os.environ.get("API_KEY")
+    #API_KEY= argv[1]
+    API_KEY = os.environ.get("API_KEY")
     #Requête
     url = f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}&units=metric'
     reponse = requests.get(url)
