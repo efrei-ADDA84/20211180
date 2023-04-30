@@ -40,13 +40,13 @@ jobs:
       - name: Checkout //Vérification du repository git
         uses: actions/checkout@v3
 
-      - name: Hadoloint //Utilisation de Ghadolint pour vérifier la syntaxe du dockerfile
-      - uses: hadolint/hadolint-action@v3.1.0
-        with:
-          dockerfile: TP2/Dockerfile
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
+
+      - name: Hadoloint //Utilisation de Ghadolint pour vérifier la syntaxe du dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: TP2/Dockerfile
 
       - name: Set up Docker Buildx /*Cette action crée et démarre un constructeur qui sera utilisé dans les étapes suivantes*/
         uses: docker/setup-buildx-action@v2

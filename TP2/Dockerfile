@@ -10,8 +10,7 @@ ENV PYTHONUNBUFFERED=1
 
 #Installation des librairies
 #Éviter l'utilisation du répertoire cache avec pip
-RUN pip install --no-cache-dir requests==2.7.0 
-RUN pip install --no-cache-dir flask==2.3.1
+RUN pip install --no-cache-dir requests==2.7.0 && pip install --no-cache-dir flask==2.3.1
 
 WORKDIR /weather_app_tp2
 COPY . /weather_app_tp2
