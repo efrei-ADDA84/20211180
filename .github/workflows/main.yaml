@@ -9,11 +9,18 @@ jobs:
         - name: 'Checkout GitHub Action'
           uses: actions/checkout@main
           
+          #Azure login
         - name: 'Login via Azure CLI'
           uses: azure/login@v1
           with:
             creds: ${{ secrets.AZURE_CREDENTIALS }}
         
+        #Docker build
+        - name: Hadoloint 
+          uses: hadolint/hadolint-action@v3.1.0
+          with:
+          dockerfile: TP2/Dockerfile
+
         - name: 'Build and push image'
           uses: azure/docker-login@v1
           with:
