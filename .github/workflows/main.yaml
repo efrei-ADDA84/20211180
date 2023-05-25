@@ -17,12 +17,11 @@ jobs:
         - name: 'Build and push image'
           uses: azure/docker-login@v1
           with:
-            context : ./TP3
             login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
+            docker build ./TP3 -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
 
         - name: 'Deploy to Azure Container Instances'
