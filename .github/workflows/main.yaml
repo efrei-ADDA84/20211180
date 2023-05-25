@@ -20,7 +20,7 @@ jobs:
             login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
-            dockerfile : ./TP3
+            repository : ./TP3
         - run: |
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
