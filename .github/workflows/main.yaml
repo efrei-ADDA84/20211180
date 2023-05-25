@@ -19,7 +19,7 @@ jobs:
         - name: Hadoloint 
           uses: hadolint/hadolint-action@v3.1.0
           with:
-          dockerfile: TP2/Dockerfile
+            dockerfile: TP2/Dockerfile
 
         - name: 'Build and push image'
           uses: azure/docker-login@v1
