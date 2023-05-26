@@ -31,6 +31,7 @@ jobs:
             docker build ./TP3 -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/20211180:${{ github.sha }}
 
+          #Déploiement sur ACI
         - name: 'Deploy to Azure Container Instances'
           uses: 'azure/aci-deploy@v1'
           with:
