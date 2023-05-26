@@ -40,10 +40,10 @@ Nous utilisons Github Actions au lieu de l'interface utilisateur ou la CLI car c
                                 4- Test de fonctionnement de l'API
 
 Après le déploiement de l'application (push ou run du workflow), on peut interroger l'API déployée sur ACI avec une commande curl :
+curl "http://devops-20211180.francesouth.azurecontainer.io:8081/?lat=5.90275&lon=102.754175"
 
 
-
-                                5- 5- Difficultés rencontrées
+                                5- Difficultés rencontrées
 
 Nous avons été confrontés à deux problèmes :
 - comment spcéifier l'enplacement du dockerfile?
