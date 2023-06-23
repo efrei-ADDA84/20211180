@@ -6,3 +6,5 @@
   <img src="https://cdn.invicti.com/statics/img/drive/h2jfrvzrbyh1yff2n3wfu2hkqqps6x_uvqo.png" alt="Github Actions Logo" /> 
 
   <img src="https://expertime.com/wp-content/uploads/2021/03/ACI-container.png" alt="Azure Container Instance Logo" />
+
+  <img src="https://blog.logrocket.com/wp-content/uploads/2020/01/dirty-terraform-hacks.png" alt="Terraform Logo" />
