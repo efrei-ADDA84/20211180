@@ -53,4 +53,6 @@ terraform apply     #Effectue un terraform plan affichant les différentes actio
 
 terraform output -raw tls_private_key > id_rsa   #Récupère la clée ssh créée et la stocke dans un fichier nommé id_rsa
 
+chmod 700 id_rsa                                 #Protège le fichier id_rsa
+
 ssh -i id_rsa devops@{vm_public_ip_adress}       #Effectue la connexion à la machine virtuelle en utilisant la clé ssh et l'adresse ip publique affichée #                                                 dans le terminal
